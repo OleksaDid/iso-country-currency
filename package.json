@@ -1,6 +1,6 @@
 {
   "name": "iso-country-currency",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Get country name, currency and currency symbol via ISO2 country abbreviation",
   "main": "index.js",
   "scripts": {
