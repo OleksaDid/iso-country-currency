@@ -4,6 +4,20 @@
 ## Usage
 Import package where you want and start using 
 
+
+### getAllISOCodes()
+Returns an array of all ISO codes and according data
+
+`getAllISOCodes()`
+```
+{
+    iso: "BE" 
+    countryName: "Belgium",
+    currency: "EUR",
+    symbol: "€"
+}
+```
+
 ### getAllInfoByISO(iso) 
 Returns an object with properties 'countryName', 'currency' and 'symbol' 
 

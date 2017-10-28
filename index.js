@@ -3,6 +3,23 @@ var dataJSON = {"BD":{"countryName":"Bangladesh","currency":"BDT","symbol":"Tk"}
 var currencyAndSymbol = ['currency', 'symbol'];
 var allSearchParams = currencyAndSymbol.concat(['countryName']);
 
+
+
+exports.getAllISOCodes = function() {
+    const keys = Object.keys(dataJSON);
+
+    return keys.map(function(key) {
+      const ISOObject = dataJSON[key];
+
+      return {
+        iso: key,
+        currency: ISOObject.currency,
+        symbol: ISOObject.symbol,
+        countryName: ISOObject.countryName
+      };
+    });
+};
+
 exports.getAllInfoByISO = function(iso) {
     if(dataJSON.hasOwnProperty(iso.toUpperCase())) {
       return dataJSON[iso.toUpperCase()];
