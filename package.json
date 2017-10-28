@@ -1,0 +1,16 @@
+{
+  "name": "iso-country-currency",
+  "version": "0.3.0",
+  "description": "Get country name, currency and currency symbol via ISO2 country abbreviation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "country",
+    "currency",
+    "iso2"
+  ],
+  "author": "Oleksii Didenko did.aleksej@gmail.com",
+  "license": "ISC"
+}
