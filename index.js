@@ -3,14 +3,14 @@ var dataJSON = {"BD":{"countryName":"Bangladesh","currency":"BDT","symbol":"Tk"}
 var currencyAndSymbol = ['currency', 'symbol'];
 var allSearchParams = currencyAndSymbol.concat(['countryName']);
 
-exports.getAllInfoByISO = (iso) => {
+exports.getAllInfoByISO = function(iso) {
     if(dataJSON.hasOwnProperty(iso.toUpperCase())) {
       return dataJSON[iso];
     }
     throw new Error('ISO2 code wasn\'t found');
 };
 
-exports.getParamByISO = (iso, param) => {
+exports.getParamByISO = function(iso, param) {
   checkParam(param, allSearchParams);
 
   if(dataJSON.hasOwnProperty(iso.toUpperCase())) {
@@ -19,7 +19,7 @@ exports.getParamByISO = (iso, param) => {
   throw new Error('ISO2 code wasn\'t found');
 };
 
-exports.getISOByParam = (param, value) => {
+exports.getISOByParam = function(param, value) {
   checkParam(param, allSearchParams);
 
   for(key in dataJSON) {
@@ -30,7 +30,7 @@ exports.getISOByParam = (param, value) => {
   throw new Error(value + ' wasn\'t found in ' + param);
 };
 
-exports.getParamByParam = (givenParam, givenParamValue, searchParam) => {
+exports.getParamByParam = function(givenParam, givenParamValue, searchParam) {
   checkParam(givenParam, allSearchParams);
   checkParam(searchParam, allSearchParams);
 
@@ -42,7 +42,7 @@ exports.getParamByParam = (givenParam, givenParamValue, searchParam) => {
   throw new Error(givenParam + ' wasn\'t found in ' + givenParamValue);
 };
 
-exports.getAllCountriesByCurrencyOrSymbol = (param, value) => {
+exports.getAllCountriesByCurrencyOrSymbol = function(param, value) {
   var countriesArray = [];
   
   checkParam(param, currencyAndSymbol);
@@ -61,7 +61,7 @@ exports.getAllCountriesByCurrencyOrSymbol = (param, value) => {
 };
 
 
-exports.getAllISOByCurrencyOrSymbol = (param, value) => {
+exports.getAllISOByCurrencyOrSymbol = function(param, value) {
   var ISOArray = [];
   
   checkParam(param, currencyAndSymbol);
