@@ -5,7 +5,7 @@ var allSearchParams = currencyAndSymbol.concat(['countryName']);
 
 exports.getAllInfoByISO = function(iso) {
     if(dataJSON.hasOwnProperty(iso.toUpperCase())) {
-      return dataJSON[iso];
+      return dataJSON[iso.toUpperCase()];
     }
     throw new Error('ISO2 code wasn\'t found');
 };
@@ -14,7 +14,7 @@ exports.getParamByISO = function(iso, param) {
   checkParam(param, allSearchParams);
 
   if(dataJSON.hasOwnProperty(iso.toUpperCase())) {
-    return dataJSON[iso][param];
+    return dataJSON[iso.toUpperCase()][param];
   }
   throw new Error('ISO2 code wasn\'t found');
 };
