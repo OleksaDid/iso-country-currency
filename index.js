@@ -22,7 +22,14 @@ exports.getAllISOCodes = function() {
 
 exports.getAllInfoByISO = function(iso) {
     if(dataJSON.hasOwnProperty(iso.toUpperCase())) {
-      return dataJSON[iso.toUpperCase()];
+      const ISOObject = dataJSON[iso.toUpperCase()];
+
+      return {
+        iso: key,
+        currency: ISOObject.currency,
+        symbol: ISOObject.symbol,
+        countryName: ISOObject.countryName
+      };
     }
     throw new Error('ISO2 code wasn\'t found');
 };
@@ -61,7 +68,7 @@ exports.getParamByParam = function(givenParam, givenParamValue, searchParam) {
 
 exports.getAllCountriesByCurrencyOrSymbol = function(param, value) {
   var countriesArray = [];
-  
+
   checkParam(param, currencyAndSymbol);
 
   for(key in dataJSON) {
@@ -69,18 +76,18 @@ exports.getAllCountriesByCurrencyOrSymbol = function(param, value) {
       countriesArray.push(dataJSON[key].countryName) ;
     }
   }
-  
+
   if(countriesArray.length === 0) {
     throw new Error(value + ' wasn\'t found in' + param);
   }
-  
+
   return countriesArray;
 };
 
 
 exports.getAllISOByCurrencyOrSymbol = function(param, value) {
   var ISOArray = [];
-  
+
   checkParam(param, currencyAndSymbol);
 
   for(key in dataJSON) {
