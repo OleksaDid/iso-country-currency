@@ -24,6 +24,7 @@ Returns an object with properties 'countryName', 'currency' and 'symbol'
 `getAllInfoByISO('BE')`
 ```
 {
+    iso: "BE"
     countryName: "Belgium",
     currency: "EUR",
     symbol: "€"
