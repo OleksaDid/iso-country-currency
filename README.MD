@@ -5,8 +5,9 @@
 Import package where you want and start using 
 
 ## Updates
-Now has ts support!
+Now has TS support!
 
+## Documentation
 
 ### getAllISOCodes()
 Returns an array of all ISO codes and according data
