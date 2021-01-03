@@ -20,12 +20,14 @@ exports.getAllISOCodes = function() {
     });
 };
 
-exports.getAllInfoByISO = function(iso) {
-    if(dataJSON.hasOwnProperty(iso.toUpperCase())) {
-      const ISOObject = dataJSON[iso.toUpperCase()];
+exports.getAllInfoByISO = function(isoCode) {
+  const iso = isoCode.toUpperCase();
+
+    if(dataJSON.hasOwnProperty(iso)) {
+      const ISOObject = dataJSON[iso];
 
       return {
-        iso: key,
+        iso,
         currency: ISOObject.currency,
         symbol: ISOObject.symbol,
         countryName: ISOObject.countryName
