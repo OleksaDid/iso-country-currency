@@ -2,7 +2,8 @@ export interface Currency {
   iso: string,
   countryName: string,
   currency: string,
-  symbol: string
+  symbol: string,
+  dateFormat: string
 }
 
 type CurrencySymbol = 'symbol' | 'currency';

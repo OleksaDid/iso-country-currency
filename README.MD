@@ -7,6 +7,9 @@ Import package where you want and start using
 ## Updates
 Now has TS support!
 
+v0.6.0
+Added dateFormat to some countries
+
 ## Documentation
 
 ### getAllISOCodes()
@@ -18,12 +21,13 @@ Returns an array of all ISO codes and according data
     iso: "BE" 
     countryName: "Belgium",
     currency: "EUR",
-    symbol: "€"
+    symbol: "€",
+    dateFormat: "d/MM/yyyy"
 }
 ```
 
 ### getAllInfoByISO(iso) 
-Returns an object with properties 'countryName', 'currency' and 'symbol' 
+Returns an object with properties 'countryName', 'currency', 'symbol' and 'dateFormat' 
 
 `getAllInfoByISO('BE')`
 ```
@@ -31,7 +35,8 @@ Returns an object with properties 'countryName', 'currency' and 'symbol'
     iso: "BE"
     countryName: "Belgium",
     currency: "EUR",
-    symbol: "€"
+    symbol: "€",
+    dateFormat: "d/MM/yyyy"
 }
 ```
 ### getParamByISO(iso, param) 
