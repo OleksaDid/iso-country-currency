@@ -175,7 +175,7 @@ var dataJSON = {
   PF: {countryName: "French Polynesia", currency: "XPF", symbol: "XPF"},
   PG: {countryName: "Papua New Guinea", currency: "PGK", symbol: "PGK"},
   PH: {countryName: "Philippines", currency: "PHP", symbol: "₱", dateFormat: "M/d/yyyy"},
-  PK: {countryName: "Pakistan", currency: "PKR", symbol: "PKRs"},
+  PK: {countryName: "Pakistan", currency: "PKR", symbol: "Rs"},
   PL: {countryName: "Poland", currency: "PLN", symbol: "zł", dateFormat: "dd.MM.yyyy"},
   PM: {countryName: "Saint Pierre and Miquelon", currency: "EUR", symbol: "€"},
   PN: {countryName: "Pitcairn", currency: "NZD", symbol: "NZ$"},
