@@ -102,7 +102,7 @@ var dataJSON = {
   IE: {countryName: "Ireland", currency: "EUR", symbol: "€", dateFormat: "dd/MM/yyyy"},
   IL: {countryName: "Israel", currency: "ILS", symbol: "₪", dateFormat: "dd/MM/yyyy"},
   IM: {countryName: "Isle of Man", currency: "GBP", symbol: "£"},
-  IN: {countryName: "India", currency: "INR", symbol: "Rs", dateFormat: "d/M/yyyy"},
+  IN: {countryName: "India", currency: "INR", symbol: "₹", dateFormat: "d/M/yyyy"},
   IO: {countryName: "British Indian Ocean Territory", currency: "USD", symbol: "$"},
   IQ: {countryName: "Iraq", currency: "IQD", symbol: "IQD", dateFormat: "dd/MM/yyyy"},
   IR: {countryName: "Iran", currency: "IRR", symbol: "IRR"},
