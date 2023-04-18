@@ -31,7 +31,8 @@ Returns an array of all ISO codes and according data
     countryName: "Belgium",
     currency: "EUR",
     symbol: "€",
-    dateFormat: "d/MM/yyyy"
+    dateFormat: "d/MM/yyyy",
+    numericCode: 978
 }
 ```
 
@@ -45,7 +46,8 @@ Returns an object with properties 'countryName', 'currency', 'symbol' and 'dateF
     countryName: "Belgium",
     currency: "EUR",
     symbol: "€",
-    dateFormat: "d/MM/yyyy"
+    dateFormat: "d/MM/yyyy",
+    numericCode: 978
 }
 ```
 ### getParamByISO(iso, param) 
