@@ -95,7 +95,7 @@ var dataJSON = {
   HK: {countryName: "Hong Kong", currency: "HKD", symbol: "HK$", dateFormat: "yyyy年M月d日"},
   HM: {countryName: "Heard Island and McDonald Islands", currency: "AUD", symbol: "AU$"},
   HN: {countryName: "Honduras", currency: "HNL", symbol: "HNL", dateFormat: "MM-dd-yyyy"},
-  HR: {countryName: "Croatia", currency: "HRK", symbol: "kn", dateFormat: "dd.MM.yyyy."},
+  HR: {countryName: "Croatia", currency: "EUR", symbol: "€", dateFormat: "dd.MM.yyyy."},
   HT: {countryName: "Haiti", currency: "HTG", symbol: "HTG"},
   HU: {countryName: "Hungary", currency: "HUF", symbol: "Ft", dateFormat: "yyyy.MM.dd."},
   ID: {countryName: "Indonesia", currency: "IDR", symbol: "Rp", dateFormat: "dd/MM/yyyy"},
