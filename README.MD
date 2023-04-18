@@ -7,8 +7,13 @@ Import package where you want and start using
 ## Updates
 Now has TS support!
 
+v0.7.0
+- Croatian currency changed to Euro, thanks [em-anas](https://github.com/em-anas)
+- Added currency numeric code, thanks [Mrugesh Vaghela](https://github.com/mrugesh-jeeves)
+- Added JSDoc comment to TS types  
+
 v0.6.0
-Added dateFormat to some countries
+- Added dateFormat to some countries
 
 ## Documentation
 
