@@ -1,4 +1,4 @@
-var dataJSON = {
+const dataJSON = {
   AD: {
     countryName: "Andorra",
     currency: "EUR",
@@ -72,7 +72,7 @@ var dataJSON = {
   AU: {
     countryName: "Australia",
     currency: "AUD",
-    symbol: "AU$",
+    symbol: "$",
     dateFormat: "d/MM/yyyy",
     numericCode: 36,
   },
@@ -660,7 +660,7 @@ var dataJSON = {
   IN: {
     countryName: 'India',
     currency: 'INR',
-    symbol: 'Rs',
+    symbol: '₹',
     dateFormat: "d/M/yyyy",
     numericCode: 356,
   },
@@ -1425,7 +1425,7 @@ var dataJSON = {
   TR: {
     countryName: 'Turkey',
     currency: 'TRY',
-    symbol: 'TL',
+    symbol: '₺',
     dateFormat: "dd.MM.yyyy",
     numericCode: 949,
   },
@@ -1589,8 +1589,8 @@ var dataJSON = {
   },
 };
 
-var currencyAndSymbol = ['currency', 'symbol'];
-var allSearchParams = currencyAndSymbol.concat(['countryName', 'dateFormat']);
+const currencyAndSymbol = ['currency', 'symbol'];
+const allSearchParams = currencyAndSymbol.concat(['countryName', 'dateFormat']);
 
 
 
@@ -1633,13 +1633,14 @@ exports.getParamByISO = function(iso, param) {
   if(dataJSON.hasOwnProperty(iso.toUpperCase())) {
     return dataJSON[iso.toUpperCase()][param];
   }
+
   throw new Error('ISO2 code wasn\'t found');
 };
 
 exports.getISOByParam = function(param, value) {
   checkParam(param, allSearchParams);
 
-  for(key in dataJSON) {
+  for(let key in dataJSON) {
     if(dataJSON.hasOwnProperty(key) && dataJSON[key][param] === value) {
       return key;
     }
@@ -1651,7 +1652,7 @@ exports.getParamByParam = function(givenParam, givenParamValue, searchParam) {
   checkParam(givenParam, allSearchParams);
   checkParam(searchParam, allSearchParams);
 
-  for(key in dataJSON) {
+  for(let key in dataJSON) {
     if(dataJSON.hasOwnProperty(key) && dataJSON[key][givenParam] === givenParamValue) {
       return dataJSON[key][searchParam];
     }
@@ -1660,11 +1661,11 @@ exports.getParamByParam = function(givenParam, givenParamValue, searchParam) {
 };
 
 exports.getAllCountriesByCurrencyOrSymbol = function(param, value) {
-  var countriesArray = [];
+  const countriesArray = [];
 
   checkParam(param, currencyAndSymbol);
 
-  for(key in dataJSON) {
+  for(let key in dataJSON) {
     if(dataJSON.hasOwnProperty(key) && dataJSON[key][param] === value) {
       countriesArray.push(dataJSON[key].countryName) ;
     }
@@ -1679,11 +1680,11 @@ exports.getAllCountriesByCurrencyOrSymbol = function(param, value) {
 
 
 exports.getAllISOByCurrencyOrSymbol = function(param, value) {
-  var ISOArray = [];
+  const ISOArray = [];
 
   checkParam(param, currencyAndSymbol);
 
-  for(key in dataJSON) {
+  for(let key in dataJSON) {
     if(dataJSON.hasOwnProperty(key) && dataJSON[key][param] === value) {
       ISOArray.push(key) ;
     }

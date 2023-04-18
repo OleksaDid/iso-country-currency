@@ -10,7 +10,11 @@ Now has TS support!
 v0.7.0
 - Croatian currency changed to Euro, thanks [em-anas](https://github.com/em-anas)
 - Added currency numeric code, thanks [Mrugesh Vaghela](https://github.com/mrugesh-jeeves)
-- Added JSDoc comment to TS types  
+- Added JSDoc comment to TS types
+- Changed 'AU$' to '$' for Australia
+- Changed 'Rs' to '₹' for India  
+- Changed 'TL' to '₺' for Turkey
+- Fixed `for` loops   
 
 v0.6.0
 - Added dateFormat to some countries
