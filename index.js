@@ -128,10 +128,10 @@ const dataJSON = {
   },
   BG: {
     countryName: "Bulgaria",
-    currency: "BGN",
-    symbol: "BGN",
+    currency: "EUR",
+    symbol: "€",
     dateFormat: "yyyy-M-d",
-    numericCode: 975,
+    numericCode: 978,
   },
   BH: {
     countryName: "Bahrain",
