@@ -324,9 +324,9 @@ const dataJSON = {
     numericCode: 132,
   },
   CW: {
-    countryName: 'Curacao',
-    currency: 'ANG',
-    symbol: 'ANG',
+    countryName: 'Curaçao',
+    currency: 'XCG',
+    symbol: 'XCG',
     numericCode: 532,
   },
   CX: {
@@ -1337,8 +1337,8 @@ const dataJSON = {
   },
   SX: {
     countryName: 'Sint Maarten',
-    currency: 'ANG',
-    symbol: 'ANG',
+    currency: 'XCG',
+    symbol: 'XCG',
     numericCode: 532,
   },
   SY: {
