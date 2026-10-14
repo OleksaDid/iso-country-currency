@@ -178,7 +178,7 @@ const dataJSON = {
     numericCode: 68,
   },
   BQ: {
-    countryName: "Bonaire, Saint Eustatius and Saba ",
+    countryName: "Bonaire, Saint Eustatius and Saba",
     currency: "USD",
     symbol: "$",
     numericCode: 840,
@@ -324,7 +324,7 @@ const dataJSON = {
     numericCode: 132,
   },
   CW: {
-    countryName: 'Curaçao',
+    countryName: 'Curacao',
     currency: 'XCG',
     symbol: 'XCG',
     numericCode: 532,
@@ -1288,9 +1288,9 @@ const dataJSON = {
   },
   SL: {
     countryName: 'Sierra Leone',
-    currency: 'SLL',
-    symbol: 'SLL',
-    numericCode: 694,
+    currency: 'SLE',
+    symbol: 'Le',
+    numericCode: 925,
   },
   SM: {
     countryName: 'San Marino',
@@ -1324,9 +1324,9 @@ const dataJSON = {
   },
   ST: {
     countryName: 'Sao Tome and Principe',
-    currency: 'STD',
-    symbol: 'STD',
-    numericCode: 678,
+    currency: 'STN',
+    symbol: 'Db',
+    numericCode: 930,
   },
   SV: {
     countryName: 'El Salvador',
@@ -1507,10 +1507,10 @@ const dataJSON = {
   },
   VE: {
     countryName: 'Venezuela',
-    currency: 'VEF',
-    symbol: 'Bs.F.',
+    currency: 'VES',
+    symbol: 'Bs.',
     dateFormat: "dd/MM/yyyy",
-    numericCode: 937,
+    numericCode: 928,
   },
   VG: {
     countryName: 'British Virgin Islands',
@@ -1583,9 +1583,9 @@ const dataJSON = {
   },
   ZW: {
     countryName: 'Zimbabwe',
-    currency: 'ZWL',
-    symbol: 'ZWL',
-    numericCode: 932,
+    currency: 'ZWG',
+    symbol: 'ZiG',
+    numericCode: 924,
   },
 };
 
