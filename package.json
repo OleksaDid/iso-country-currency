@@ -1,10 +1,10 @@
 {
   "name": "iso-country-currency",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "Get country name, currency and currency symbol via ISO2 country abbreviation",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexDid/iso-country-currency.git"
+    "url": "git+https://github.com/OleksaDid/iso-country-currency.git"
   },
   "main": "index.js",
   "types": "index.d.ts",
@@ -17,5 +17,19 @@
     "iso2"
   ],
   "author": "Oleksii Didenko did.aleksej@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/OleksaDid"
+    },
+    {
+      "type": "thanks.dev",
+      "url": "https://thanks.dev/u/gh/oleksadid"
+    }
+  ]
 }
