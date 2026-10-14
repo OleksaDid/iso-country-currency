@@ -1,16 +1,51 @@
 {
   "name": "iso-country-currency",
-  "version": "0.8.0",
-  "description": "Get country name, currency, currency symbol, ISO 4217 numeric code and minor units via ISO2 country code",
+  "version": "1.0.0-beta.0",
+  "description": "ISO 3166 countries with ISO 4217 currency, symbol, numeric code, minor units and locale-aware formatting",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OleksaDid/iso-country-currency.git"
   },
-  "main": "index.js",
-  "types": "index.d.ts",
+  "homepage": "https://github.com/OleksaDid/iso-country-currency#readme",
+  "bugs": "https://github.com/OleksaDid/iso-country-currency/issues",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/OleksaDid"
+    },
+    {
+      "type": "thanks.dev",
+      "url": "https://thanks.dev/u/gh/oleksadid"
+    }
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
-    "test": "node --test",
-    "check-iso4217": "node scripts/check-iso4217.js"
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "npm run build && node --test",
+    "check-data": "npm run build && node scripts/check-data.mjs",
+    "prepublishOnly": "npm test"
   },
   "keywords": [
     "country",
@@ -19,12 +54,16 @@
     "iso3166",
     "iso4217",
     "currency-symbol",
-    "minor-units"
+    "minor-units",
+    "iso3166-alpha3",
+    "country-flag",
+    "currency-format",
+    "intl"
   ],
   "author": "Oleksii Didenko did.aleksej@gmail.com",
   "license": "ISC",
-  "files": [
-    "index.js",
-    "index.d.ts"
-  ]
+  "devDependencies": {
+    "tsup": "8.3.5",
+    "typescript": "5.6.3"
+  }
 }
