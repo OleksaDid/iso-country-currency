@@ -5,7 +5,15 @@
 Import package where you want and start using 
 
 ## Updates
-Now has TS support!
+v0.8.0
+- Bulgarian currency changed to Euro, thanks [ivkoandrv](https://github.com/ivkoandrv)
+- Curacao and Sint Maarten currency changed to Caribbean guilder (XCG), thanks [ivkoandrv](https://github.com/ivkoandrv)
+- Updated currencies retired from ISO 4217: Sierra Leone (SLE), Sao Tome and Principe (STN), Venezuela (VES), Zimbabwe (ZWG)
+- `numericCode` is now actually returned by `getAllISOCodes()` and `getAllInfoByISO()`
+- Added `minorUnits` – number of decimal digits of the currency according to ISO 4217 (e.g. 2 for USD, 0 for JPY, 3 for BHD)
+- `getParamByISO()`, `getISOByParam()` and `getParamByParam()` support `numericCode`, `minorUnits` and `dateFormat`
+- Removed trailing space from "Bonaire, Saint Eustatius and Saba"
+- Data is checked weekly against the [official ISO 4217 list](https://www.six-group.com/en/products-services/financial-information/data-standards.html)
 
 v0.7.0
 - Croatian currency changed to Euro, thanks [em-anas](https://github.com/em-anas)
@@ -32,12 +40,13 @@ Returns an array of all ISO codes and according data
     currency: "EUR",
     symbol: "€",
     dateFormat: "d/MM/yyyy",
-    numericCode: 978
+    numericCode: 978,
+    minorUnits: 2
 }
 ```
 
 ### getAllInfoByISO(iso) 
-Returns an object with properties 'countryName', 'currency', 'symbol' and 'dateFormat' 
+Returns an object with properties 'iso', 'countryName', 'currency', 'symbol', 'dateFormat', 'numericCode' and 'minorUnits'
 
 `getAllInfoByISO('BE')`
 ```
@@ -47,7 +56,8 @@ Returns an object with properties 'countryName', 'currency', 'symbol' and 'dateF
     currency: "EUR",
     symbol: "€",
     dateFormat: "d/MM/yyyy",
-    numericCode: 978
+    numericCode: 978,
+    minorUnits: 2
 }
 ```
 ### getParamByISO(iso, param) 

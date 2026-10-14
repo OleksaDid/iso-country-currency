@@ -1,21 +1,30 @@
 {
   "name": "iso-country-currency",
-  "version": "0.7.2",
-  "description": "Get country name, currency and currency symbol via ISO2 country abbreviation",
+  "version": "0.8.0",
+  "description": "Get country name, currency, currency symbol, ISO 4217 numeric code and minor units via ISO2 country code",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlexDid/iso-country-currency.git"
+    "url": "git+https://github.com/OleksaDid/iso-country-currency.git"
   },
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test",
+    "check-iso4217": "node scripts/check-iso4217.js"
   },
   "keywords": [
     "country",
     "currency",
-    "iso2"
+    "iso2",
+    "iso3166",
+    "iso4217",
+    "currency-symbol",
+    "minor-units"
   ],
   "author": "Oleksii Didenko did.aleksej@gmail.com",
-  "license": "ISC"
+  "license": "ISC",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ]
 }
