@@ -1,0 +1,27 @@
+name: Publish
+
+# Publishes to npm when a GitHub release is created, using npm trusted publishing (OIDC):
+# no npm token is stored in the repo and every version gets a provenance attestation.
+# Prereleases (e.g. 1.1.0-beta.0) go to the `next` dist-tag, everything else to `latest`.
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm install -g npm@11.6.2
+      - name: Check that the release tag matches package.json
+        run: test "${{ github.event.release.tag_name }}" = "v$(node -p 'require(`./package.json`).version')"
+      - run: npm ci
+      - run: npm publish --provenance --tag ${{ github.event.release.prerelease && 'next' || 'latest' }}
